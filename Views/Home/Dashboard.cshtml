@@ -1,0 +1,43 @@
+<div class="container">
+    <a href="../logout">Logout</a>&nbsp&nbsp&nbsp&nbsp
+    <a href="/addWedding">New Wedding</a>
+    <h1>Welcome to the Wedding Planner</h1>
+    <table class="table table-hover">
+        <thead>
+            <th>Wedding</th>
+            <th>Date</th>
+            <th>Guest</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            @foreach(var guest in Model.guest)
+            {
+                <tr>
+                    <td>
+                        <a href="weddingInfo/@guest.weddingID">@guest.wedder1 & @guest.wedder2</a>
+                    </td>
+                    <td>
+                        @guest.date.ToString("D")
+                    </td>
+                    <td>
+                        @guest.guest.Count                        
+                    </td>
+                        @{
+                            if(@guest.userID == ViewBag.userID)
+                            {
+                                <td>
+                                    <a href="deleteWediing/@guest.weddingID">Delete</a>
+                                </td>
+                            }
+                            
+                            else
+                            {
+                                <td><a href=""guest/@guest.weddingID/1"></a></td>
+                            }
+                        }
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<!-- <p>@ViewBag.userID</p> -->

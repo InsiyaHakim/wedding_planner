@@ -1,0 +1,29 @@
+@model Wedding
+<div class="container">
+    <h1>Plan Your Wedding</h1>
+    <a href="dashboard">Dashboard</a>&nbsp&nbsp&nbsp
+    <a href="logout">Logout</a>
+    <form action="createWedding" method="post">
+        <div class="form-group">
+            <span asp-validation-for="wedder1"></span>
+            <label asp-for="wedder1"></label>
+            <input type="text" asp-for="wedder1">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="wedder2"></span>
+            <label asp-for="wedder2"></label>
+            <input type="text" asp-for="wedder2">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="date"></span>
+            <label asp-for="date"></label>
+            <input type="date" asp-for="date">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="address"></span>
+            <label asp-for="address"></label>
+            <input type="text" asp-for="address" size="100px">
+        </div>
+        <input type="submit" value="Create">
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+    <a href="../dashboard">Dashboard</a>&nbsp&nbsp&nbsp
+    <a href="../logout">Logout</a>
+    <h1>@Model.wedder1 and @Model.wedder2's Wedding</h1>
+    <h3>Date: @Model.date.ToString("D")</h3>
+    <h4>Guests:</h4>
+    @foreach(var guest in Model.guest)
+    {
+        <p>@guest.user.f_name @guest.user.l_name</p>
+    }
+</div>

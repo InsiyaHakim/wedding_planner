@@ -1,0 +1,17 @@
+@model Login
+<div class="container">
+    <h1>Login</h1>
+    <form action="login" method="post">
+        <div class="form-group">
+        <span asp-validation-for="log_email"></span>
+        <label asp-for="log_email"></label>
+        <input type="text" asp-for="log_email">
+    </div>
+    <div class="form-group">
+        <span asp-validation-for="log_password"></span>
+        <label asp-for="log_password"></label>
+        <input type="password" asp-for="log_password">
+    </div>
+    <input type="submit" value="Log In">
+    </form>
+</div>
